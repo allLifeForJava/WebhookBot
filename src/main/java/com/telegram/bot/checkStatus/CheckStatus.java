@@ -1,11 +1,11 @@
 package com.telegram.bot.checkStatus;
 
-import com.telegram.bot.botUser.Position;
+import com.telegram.bot.botUser.BotUser;
 import org.telegram.telegrambots.meta.api.objects.Message;
 
 public interface CheckStatus {
 
-    Position getPositionFromMessage (Message message);
+    BotUser getBotUserFromMessage(Message message);
 
 
 }

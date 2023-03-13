@@ -2,11 +2,13 @@ package com.telegram.bot.messageSendler;
 
 import com.telegram.bot.telegramBot.TelegramBot;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
+@Component
 public class MessageSandlerImpl implements MessageSandler {
-    @Autowired
+@Autowired
     private TelegramBot bot;
 
 
@@ -20,4 +22,5 @@ public class MessageSandlerImpl implements MessageSandler {
 
 
     }
+
 }

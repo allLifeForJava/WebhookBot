@@ -1,24 +1,24 @@
 package com.telegram.bot.telegramBot;
 
 import com.telegram.bot.botConfiguration.BotConfiguration;
-import com.telegram.bot.checkStatus.CheckStatus;
 import com.telegram.bot.services.BotUsersServiceImpl;
+import com.telegram.bot.switchHandler.BotUserPositionHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.telegram.telegrambots.meta.api.methods.BotApiMethod;
-import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.methods.updates.SetWebhook;
 import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.starter.SpringWebhookBot;
+
+import javax.validation.constraints.NotNull;
 
 public class TelegramBot extends SpringWebhookBot {
     @Autowired
     private BotConfiguration botConfiguration;
     @Autowired
     private BotUsersServiceImpl botUsersService;
-
     @Autowired
-    private CheckStatus checkStatus;
+    private BotUserPositionHandler botUserPositionHandler;
 
     public TelegramBot(SetWebhook setWebhook) {
         super(setWebhook);
@@ -40,10 +40,23 @@ public class TelegramBot extends SpringWebhookBot {
     }
 
     @Override
-    public BotApiMethod<Message> onWebhookUpdateReceived(Update update) {
+    public BotApiMethod<Message> onWebhookUpdateReceived(@NotNull Update update) {
 
 
-        if (update.hasMessage()) {
+        Message message = update.getMessage();
+        System.out.println("message id = " + message.getChatId());
+        return botUserPositionHandler.messageHandler(message);
+
+
+//        return null;
+
+
+
+
+
+
+
+       /* if (update.hasMessage()) {
 
             Message message = update.getMessage();
 
@@ -53,5 +66,6 @@ public class TelegramBot extends SpringWebhookBot {
                     .build();
         }
         return null;
+    }*/
     }
 }

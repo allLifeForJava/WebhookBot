@@ -17,15 +17,15 @@ public class CheckStatusImpl implements CheckStatus {
     }
 
     @Override
-    public Position getPositionFromMessage(Message message) {
+    public BotUser getBotUserFromMessage(Message message) {
 
         BotUser botUser = botUsersService.findById(message.getChatId());
 
         if (botUser == null) {
-            createNewBotUserFromMessage(message);
+            botUser = createNewBotUserFromMessage(message);
         }
 
-        return botUser.getPosition();
+        return botUser;
     }
 
     private BotUser createNewBotUserFromMessage(Message message) {

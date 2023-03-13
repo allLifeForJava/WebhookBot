@@ -1,0 +1,29 @@
+[33mcommit 098876331a853591aaa362adb84957e532c0a11c[m[33m ([m[1;36mHEAD -> [m[1;32mtestBranch[m[33m)[m
+Author: Ihor Murashko <i.murashko0911@gmail.com>
+Date:   Sun Mar 5 14:48:27 2023 +0100
+
+    added entity BotUser,RepositoryDAO, Service for work with MySQL; added classes for checkStatus of User,
+
+[33mcommit a8d5f2b4aa9f074a1722634d08c0e8864a7d2e98[m[33m ([m[1;33mtag: version_1.0[m[33m, [m[1;31morigin/testBranch[m[33m)[m
+Author: Ihor Murashko <i.murashko0911@gmail.com>
+Date:   Wed Feb 8 11:05:20 2023 +0100
+
+    added new branch testBranch
+
+[33mcommit 90a2696f1a96d76113a655719a90414339f88fd1[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: Ihor Murashko <i.murashko0911@gmail.com>
+Date:   Wed Feb 8 10:31:46 2023 +0100
+
+    added file application.properties to .gitignore
+
+[33mcommit 71e5288dff70d00be344fabac4599c32c3951e73[m
+Author: Ihor Murashko <i.murashko0911@gmail.com>
+Date:   Wed Feb 8 10:26:28 2023 +0100
+
+    changed file .gitignore
+
+[33mcommit b398100c6d4340687440052630122700deb412c4[m
+Author: Ihor Murashko <i.murashko0911@gmail.com>
+Date:   Wed Feb 8 10:09:20 2023 +0100
+
+    initial commit of the project

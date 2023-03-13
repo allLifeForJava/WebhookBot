@@ -36,6 +36,7 @@ public class BotUserDAOImpl implements BotUserDAO {
     public BotUser findById(Long id) {
         BotUser botUser = entityManager.find(BotUser.class, id);
         return botUser;
+
     }
 
     @Override

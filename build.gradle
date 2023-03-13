@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.telegram.bot'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
+sourceCompatibility = "17.PREVIEW"
 
 repositories {
 	mavenCentral()
@@ -22,8 +22,13 @@ dependencies {
 
 
 
+
+
+
+
 }
 
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
